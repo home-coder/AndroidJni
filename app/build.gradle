@@ -1,15 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "com.example.jiangxiujie.androidjni"
-        minSdkVersion 23
-        targetSdkVersion 25
+        minSdkVersion 19
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        ndk {
+            moduleName "hello_jni"
+        }
     }
     buildTypes {
         release {
@@ -22,5 +25,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:23.0.1'
 }
